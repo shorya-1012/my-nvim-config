@@ -1,1 +1,1 @@
-require("shorya")
+require("plugins")
