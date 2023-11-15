@@ -13,6 +13,7 @@ return require('packer').startup(function(use)
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
 
+    --color scheme
     use({
         'rose-pine/neovim',
         as = 'rose-pine',
@@ -64,10 +65,9 @@ return require('packer').startup(function(use)
         config = function() require("nvim-autopairs").setup {} end
     }
 
-    -- formatting (for go mainly)
+    --formatting
     use('jose-elias-alvarez/null-ls.nvim',
         {
-            ft = "go",
             opt = function()
                 return require("plugins.null-ls")
             end
